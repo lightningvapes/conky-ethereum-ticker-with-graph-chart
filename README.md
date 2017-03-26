@@ -24,10 +24,10 @@ Give executable permissions to the install-graph-and-ticker.sh, install-pip.py, 
 
 Depending on your installed version of conky, use one of the commands below to use the included .conkyrc files included. Or, simply append your current .conkyrc with the appropriate snippet.
 
-For conky versions previous to 1.10:
+#For conky versions previous to 1.10:
 		mv ~/eth-price-graph/.conkyrc-pre1.10 ~/.conky/.conkyrc
 
-For conky 1.10 and later:
+#For conky 1.10 and later:
 		mv ~/eth-price-graph/.conkyrc-1.10+ ~/.conky/.conkyrc
 
 
