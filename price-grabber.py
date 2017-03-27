@@ -29,7 +29,7 @@ def file_write(ethereum):
     ethprice = ethereum[0]
     ethvolume = ethereum[1]
     ethchange = ethereum[2]   
-    file = open("%s/eth-price-graph/prices.txt" % home, 'a')
+    file = open("%s/conky-ethereum-ticker-with-graph-chart-master/prices.txt" % home, 'a')
     file.write("%.2f \n" % (ethprice))
     file.close
 

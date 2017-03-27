@@ -8,7 +8,7 @@ chmod +x ${DIR}/crypto-tickerv2.py
 
 chmod +x ${DIR}/price-grabber.py
 
-chmod +x ${DIR}/price-plotter.sh
+chmod +x ${DIR}/install-pip.py
 
 crontab -l > mycron
 echo "*/1 * * * * ${DIR}/crypto-tickerv2.py" >> mycron

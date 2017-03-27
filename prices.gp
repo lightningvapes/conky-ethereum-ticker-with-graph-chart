@@ -17,6 +17,6 @@ set title textcolor rgb 'white'
 set ylabel '$'
 set ylabel font 'Verdana,20' textcolor rgb 'white' offset 44,0
 set ylabel rotate by 180
-set output '~/eth-price-graph/download.png'
+set output '~/conky-ethereum-ticker-with-graph-chart-master/download.png'
 
-plot '< tail -n 144 ~/eth-price-graph/prices.txt' lw 3 with lines notitle
+plot '< tail -n 144 ~/conky-ethereum-ticker-with-graph-chart-master/prices.txt' lw 3 with lines notitle

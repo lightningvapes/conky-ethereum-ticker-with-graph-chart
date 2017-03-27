@@ -7,9 +7,8 @@ home = expanduser('~')
 
 def parse():
     bitcoin = Bitcoin()
-    ethereum = Ethereum()
-    monero = Monero()
-    file_write(bitcoin, ethereum, monero)
+    ethereum = Ethereum()    
+    file_write(bitcoin, ethereum)
 
 def Bitcoin():
     info = []
@@ -43,33 +42,14 @@ def Ethereum():
     info.extend((price, volume, change))
     return info
 
-def Monero():
-    info = []
-    price_url = "http://coinmarketcap-nexuist.rhcloud.com/api/xmr/price"
-    r = requests.get(price_url)
-    jsn_dict = r.json()
-    price = jsn_dict['usd']
-    volume_url = "http://coinmarketcap-nexuist.rhcloud.com/api/xmr/volume"
-    t = requests.get(volume_url)
-    jsn_dict2 = t.json()
-    volume = jsn_dict2['usd']
-    change_url = "http://coinmarketcap-nexuist.rhcloud.com/api/xmr/change"
-    e = requests.get(change_url)
-    change = e.json()
-    info.extend((price, volume, change))
-    return info
-
-def file_write(bitcoin, ethereum, monero):
+def file_write(bitcoin, ethereum):
     bitprice = bitcoin[0]
     bitvolume = bitcoin[1]
     bitchange = bitcoin[2]
     ethprice = ethereum[0]
     ethvolume = ethereum[1]
     ethchange = ethereum[2]
-    xmrprice = monero[0]
-    xmrvolume = monero[1]
-    xmrchange = monero[2]
-    file = open("%s/eth-price-graph/price-percentage.txt" % home, 'w')
+    file = open("%s/conky-ethereum-ticker-with-graph-chart-master/price-percentage.txt" % home, 'w')
     file.write("BTC:           $%.2f      %s%% \n" % (bitprice, bitchange))
     file.write("ETH:           $%.2f         %s%% \n" % (ethprice, ethchange))
     file.close
