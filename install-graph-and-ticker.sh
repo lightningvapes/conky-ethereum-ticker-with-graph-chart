@@ -21,4 +21,8 @@ echo "*/5 * * * * /usr/bin/gnuplot ${DIR}/prices.gp > ${DIR}/download.png" >> my
 crontab mycron
 rm mycron
 
+${DIR}/./crypto-tickerv2.py
+
+${DIR}/./cloud-prices.sh
+
 echo done
