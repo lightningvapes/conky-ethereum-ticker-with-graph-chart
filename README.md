@@ -19,7 +19,7 @@ Give executable permissions to the install-graph-and-ticker.sh, install-pip.py, 
 		sudo chmod +x install-graph-and-ticker.sh price-grabber.py install-pip.py crypto-tickerv2.py
 		sudo ./install-pip.py
 		sudo -H pip install requests
-		sudo apt-get install python gnuplot conky-all
+		sudo apt-get install python gnuplot conky-all curl
 		./install-graph-and-ticker.sh
 		
 		#For conky versions previous to 1.10:
