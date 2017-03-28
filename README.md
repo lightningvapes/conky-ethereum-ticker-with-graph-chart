@@ -1,4 +1,8 @@
 # conky-ethereum-ticker-with-graph-chart
+
+![alt tag](http://raw.githubusercontent.com/lightningvapes/conky-ethereum-ticker-with-graph-chart/blob/master/screenshot.png)
+
+
 Notes:
 Displays cryptocurrency price, percentage change, and 12hr price graph on the desktop using conky.
 Only available on Linux. Y axis far left values will change in 1$ increments as price fluctuates.
