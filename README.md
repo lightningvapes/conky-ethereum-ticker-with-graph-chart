@@ -1,6 +1,6 @@
 # conky-ethereum-ticker-with-graph-chart
 
-![alt tag](http://raw.githubusercontent.com/lightningvapes/conky-ethereum-ticker-with-graph-chart/blob/master/screenshot.png)
+![alt tag](http://https://github.com/lightningvapes/conky-ethereum-ticker-with-graph-chart/blob/master/screenshot.png?raw=true)
 
 
 Notes:
