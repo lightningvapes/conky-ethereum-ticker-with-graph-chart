@@ -25,4 +25,6 @@ ${DIR}/./crypto-tickerv2.py
 
 ${DIR}/./cloud-prices.sh
 
+/usr/bin/gnuplot ${DIR}/prices.gp > ${DIR}/download.png
+
 echo done
