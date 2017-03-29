@@ -32,6 +32,7 @@ Give executable permissions to the install-graph-and-ticker.sh, install-pip.py, 
 		#For conky 1.10 and later:
 		mv ~/eth-price-graph/.conkyrc-1.10+ ~/.conky/.conkyrc
 
+If the cloud-prices.sh doesn't work for whatever reason (relies on a computer of mine running a separate script), then use crontab -e in terminal and point instead to price-grabber.py. This will grab the most recent data, though for historical accuracy throughout the graph it's best if the computer runs 24/7.
 
 Depending on your installed version of conky, use one of the commands below to use the included .conkyrc files included. Or, simply append your current .conkyrc with the appropriate snippet.
 
