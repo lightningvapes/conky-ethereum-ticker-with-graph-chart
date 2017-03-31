@@ -36,7 +36,8 @@ show_graph_range no
 
 
 TEXT
-${exec cat $(eval echo ~${SUDO_USER})/eth-price-graph/price-percentage.txt}
+${if_match "${exec cat ~/conky-ethereum-ticker-with-graph-chart-master/btc-price-percentage-btc.txt | grep -o -}" =="-"}${color6}${else}${if_match "${exec cat /home/sean/conky-ethereum-ticker-with-graph-chart-master/btc-price-percentage.txt | grep -o -}" !="-"}${color7}${endif}${exec cat $(eval echo ~${SUDO_USER})/conky-ethereum-ticker-with-graph-chart-master/btc-price-percentage.txt}
+${if_match "${exec cat ~/conky-ethereum-ticker-with-graph-chart-master/eth-price-percentage.txt | grep -o -}" =="-"}${color6}${else}${if_match "${exec cat /home/sean/conky-ethereum-ticker-with-graph-chart-master/eth-price-percentage.txt | grep -o -}" !="-"}${color7}${endif}${exec cat $(eval echo ~${SUDO_USER})/conky-ethereum-ticker-with-graph-chart-master/eth-price-percentage.txt}
 
 ${image ~/eth-price-graph/download.png -p 0,400 -s 200x120}
 
