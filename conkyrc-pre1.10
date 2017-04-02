@@ -38,7 +38,8 @@ show_graph_range no
 TEXT
 ${if_match "${exec cat ~/conky-ethereum-ticker-with-graph-chart-master/btc-price-percentage.txt | grep -o -}" =="-"}${color6}${else}${if_match "${exec cat /home/sean/conky-ethereum-ticker-with-graph-chart-master/btc-price-percentage.txt | grep -o -}" !="-"}${color7}${endif}${exec cat $(eval echo ~${SUDO_USER})/conky-ethereum-ticker-with-graph-chart-master/btc-price-percentage.txt}
 ${if_match "${exec cat ~/conky-ethereum-ticker-with-graph-chart-master/eth-price-percentage.txt | grep -o -}" =="-"}${color6}${else}${if_match "${exec cat /home/sean/conky-ethereum-ticker-with-graph-chart-master/eth-price-percentage.txt | grep -o -}" !="-"}${color7}${endif}${exec cat $(eval echo ~${SUDO_USER})/conky-ethereum-ticker-with-graph-chart-master/eth-price-percentage.txt}
-${color3}ETH Balance:${alignr}${exec cat $(eval echo ~${SUDO_USER})/conky-ethereum-ticker-with-graph-chart-master/miner_balance.txt}
+${color3}Miner ETH Balance:${alignr}${exec cat $(eval echo ~${SUDO_USER})/conky-ethereum-ticker-with-graph-chart-master/miner_balance.txt}
+${color3}Coinbase ETH Balance:${alignr}${exec cat $(eval echo ~${SUDO_USER})/conky-ethereum-ticker-with-graph-chart-master/coinbase_balance.txt}
 
 ${image ~/eth-price-graph/download.png -p 0,400 -s 200x120}
 

@@ -1,10 +1,10 @@
 # conky-ethereum-ticker-with-graph-chart
 
-![alt tag](https://github.com/lightningvapes/conky-ethereum-ticker-with-graph-chart/blob/master/screenshot2.png)
+![alt tag](https://github.com/lightningvapes/conky-ethereum-ticker-with-graph-chart/blob/master/screenshot3.png)
 
 
 Notes:
-Displays cryptocurrency balance, price, percentage change, and 12hr price graph on the desktop using conky.
+Displays cryptocurrency balances, price, percentage change, and 12hr price graph on the desktop using conky.
 Only available on Linux. Y axis far left values will change in 1$ increments as price fluctuates.
 
 
@@ -19,14 +19,14 @@ ethereum / geth (use Mist or Ethereum-Wallet for easiness sake. geth used only f
 
 Installation:
 Download the ZIP and extract to your home directory.
-Give executable permissions to the install-graph-and-ticker.sh, install-pip.py, crypto-tickerv2.py and price-grabber.py scripts located within the extracted directory.
+Give executable permissions to the install-graph-and-ticker.sh and install-pip.py scripts located within the extracted directory. Get an API key from Coinbase if you already have an account with them, and input key & secret into cb_balance_grabber.py to print your acct balance to conky.
 
 		cd ~/conky-ethereum-ticker-with-graph-chart-master/
 		sudo add-apt-repository -y ppa:ethereum/ethereum
 		sudo apt-get update		
 		sudo chmod +x install-graph-and-ticker.sh install-pip.py
 		sudo ./install-pip.py
-		sudo -H pip install requests
+		sudo -H pip install requests coinbase
 		sudo apt-get install python gnuplot conky-all curl ethereum
 		./install-graph-and-ticker.sh
 		
