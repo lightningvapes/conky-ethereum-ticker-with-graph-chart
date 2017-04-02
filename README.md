@@ -1,10 +1,10 @@
 # conky-ethereum-ticker-with-graph-chart
 
-![alt tag](https://github.com/lightningvapes/conky-ethereum-ticker-with-graph-chart/blob/master/screenshot1.png)
+![alt tag](https://github.com/lightningvapes/conky-ethereum-ticker-with-graph-chart/blob/master/screenshot2.png)
 
 
 Notes:
-Displays cryptocurrency price, percentage change, and 12hr price graph on the desktop using conky.
+Displays cryptocurrency balance, price, percentage change, and 12hr price graph on the desktop using conky.
 Only available on Linux. Y axis far left values will change in 1$ increments as price fluctuates.
 
 
@@ -14,23 +14,27 @@ gnuplot
 pip
 requests (installed via pip)
 conky
+ethereum / geth (use Mist or Ethereum-Wallet for easiness sake. geth used only for grabbing account balance)
 
 
 Installation:
 Download the ZIP and extract to your home directory.
 Give executable permissions to the install-graph-and-ticker.sh, install-pip.py, crypto-tickerv2.py and price-grabber.py scripts located within the extracted directory.
 
-		sudo chmod +x install-graph-and-ticker.sh price-grabber.py install-pip.py crypto-tickerv2.py
+		cd ~/conky-ethereum-ticker-with-graph-chart-master/
+		sudo add-apt-repository -y ppa:ethereum/ethereum
+		sudo apt-get update		
+		sudo chmod +x install-graph-and-ticker.sh install-pip.py
 		sudo ./install-pip.py
 		sudo -H pip install requests
-		sudo apt-get install python gnuplot conky-all curl
+		sudo apt-get install python gnuplot conky-all curl ethereum
 		./install-graph-and-ticker.sh
 		
 		#For conky versions previous to 1.10:
-		mv ~/eth-price-graph/.conkyrc-pre1.10 ~/.conky/.conkyrc
+		mv ~/conky-ethereum-ticker-with-graph-chart-master/.conkyrc-pre1.10 ~/.conky/.conkyrc
 		
 		#For conky 1.10 and later:
-		mv ~/eth-price-graph/.conkyrc-1.10+ ~/.conky/.conkyrc
+		mv ~/conky-ethereum-ticker-with-graph-chart-master/.conkyrc-1.10+ ~/.conky/.conkyrc
 
 If the cloud-prices.sh doesn't work for whatever reason (relies on a computer of mine running a separate script), then use crontab -e in terminal and point instead to price-grabber.py. This will grab the most recent data, though for historical accuracy throughout the graph it's best if the computer runs 24/7.
 
