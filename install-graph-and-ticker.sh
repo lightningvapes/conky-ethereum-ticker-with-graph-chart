@@ -18,6 +18,8 @@ chmod +x ${DIR}/get-balance.sh
 
 chmod +x ${DIR}/truncate_coinbase_balance.sh
 
+chmod +x ${DIR}/cb_balance_grabber.py
+
 crontab -l > mycron
 echo "*/2 * * * * ${DIR}/crypto-tickerv2-eth.py" >> mycron
 echo "*/2 * * * * ${DIR}/crypto-tickerv2-btc.py" >> mycron
