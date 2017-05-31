@@ -10,7 +10,7 @@ set autoscale y
 set linetype 1 lc rgb 'green'
 set ytics font 'Verdana,16'
 set ytics textcolor rgb 'white'
-set ytics 1
+set ytics 5
 set title '12 hrs' offset 0,-10.7
 set title font 'Verdana,16'
 set title textcolor rgb 'white'
