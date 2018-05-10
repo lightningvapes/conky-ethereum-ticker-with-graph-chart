@@ -15,6 +15,7 @@ pip
 requests (installed via pip)
 conky
 ethereum / geth (use Mist or Ethereum-Wallet for easiness sake. geth used only for grabbing account balance)
+VERDANA FONT
 
 
 Installation:
@@ -29,6 +30,8 @@ Give executable permissions to the install-graph-and-ticker.sh and install-pip.p
 		sudo -H pip install requests coinbase
 		sudo apt-get install python gnuplot conky-all curl ethereum
 		./install-graph-and-ticker.sh
+		
+		#BE SURE TO INSTALL VERDANA FONT FROM THE WEB!!!!!!
 		
 		#For conky versions previous to 1.10:
 		mv ~/conky-ethereum-ticker-with-graph-chart-master/.conkyrc-pre1.10 ~/.conky/.conkyrc
