@@ -6,6 +6,7 @@ set term png transparent truecolor
 
 set style rectangle fillstyle noborder
 unset xtics
+set ytics 100
 set autoscale y
 set linetype 1 lc rgb 'green'
 set ytics font 'Verdana,16'
